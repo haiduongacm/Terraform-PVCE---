@@ -3,7 +3,7 @@ output "vpce-api_id" {
   value = aws_vpc_endpoint.ecr-api.id
 }
 
-output "vpce-api_dkr" {
+output "vpce-dkr_id" {
   description = "get id vpce to serivce ecr api"
   value = aws_vpc_endpoint.ecr-dkr.id
 }
