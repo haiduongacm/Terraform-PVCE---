@@ -65,8 +65,10 @@ resource "aws_iam_policy" "awsvpce" {
       "Resource": "*",
       "Condition": {
         "StringEquals": {
-          "aws:SourceVpce": "${module.vpce.vpce-api_id}"
-          "aws:SourceVpce": "${module.vpce.vpce-dkr_id}"
+          "aws:SourceVpce": [
+             "${module.vpce.vpce-api_id}",
+             "${module.vpce.vpce-dkr_id}"
+          ]
         }
       }
     }
